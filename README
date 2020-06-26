@@ -1,0 +1,38 @@
+Elliott Winicki
+
+This project is an object oriented neural network in python. The project has
+three objects.
+
+   Perceptron - Collection of weights
+   Layer - Collection of perceptrons
+   Network - Collection of layers
+
+This network is feedforward with backpropagation. It defaults to use a sigmoid
+function for the activation, but the activation function is a property and
+can be changed by the user which is demonstrated in main.py to use the tanh
+function. Changing the property requires setting both the activation function
+and derivative of the activation function.
+
+This project implements crossvalidation to test the performance of the network.
+It uses 80% of the data for training, and generates 1,000,000 samples from the
+training data by sampling with replacement. It then tests the data on the
+remaining 20%. It runs this process 20 times and averages the accuracies.
+
+We tested two training sets, the iris data and the seed data. The networks were
+designed as follows:
+   IRIS:
+      Input layer: 4 perceptrons
+      Hidden layer: 7 Perceptrons
+      Output layer: 3 perceptrons
+
+   SEED:
+      Input layer: 7 perceptrons
+      Hidden layer: 12 Perceptrons
+      Output layer: 3 perceptrons
+
+Both data sets were tested using sigmoid and tanh activation functions. The
+results are stored in results.out. Feel free to run the code, but it takes
+a long time.
+
+To run the code, run the following command:
+   python3 main.py
